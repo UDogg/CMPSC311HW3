@@ -137,7 +137,6 @@ while(len>0)
       jbod_operation(op,mybuf);
       int num_bytes_to_read_from_block = minimum(len, minimum(256,256-offset));
       num_read+=num_bytes_to_read_from_block;
-      addr+=num_bytes_to_read_from_block;
 
       //since block moves the pointer to the next block.
       op = seekd(disknum); 
